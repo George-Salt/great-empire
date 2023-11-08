@@ -1,0 +1,188 @@
+
+:root {
+  --bgc: #101010;
+  --bdc: #2f2f2f;
+  --ac: #bdff00;
+}
+
+
+main > .task {
+  padding: 75px 150px 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main > .task .content {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main > .task h1 {
+  font-size: 50px;
+  border-bottom: 5px solid var(--ac);
+}
+
+main > .task img {
+  width: 75%;
+  margin-top: 50px;
+  border-radius: 50px;
+}
+
+main > .task form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+main > .task h2 {
+  width: min-content;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+main > .task input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+main > .task input + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  margin: 5px 0;
+  font-weight: 600;
+}
+
+main > .task input + label::before {
+  content: '';
+  display: inline-flex;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+main > .task input:not(:disabled):not(:checked) + label:hover::before {
+  cursor: pointer;
+}
+
+main > .task .button {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+  width: min-content;
+  transition: all 0.3s;
+}
+
+main > .task .button:hover {
+  cursor: pointer;
+}
+
+main > .task .solution {
+  margin-top: 5px;
+  font-weight: 600;
+  display: none;
+}
+
+/* Светлая тема */
+
+main > .task.light {
+  background-color: white;
+  color: var(--bgc);
+}
+
+main > .task.light input + label::before {
+  border: 1.5px solid var(--bgc);
+}
+
+main > .task.light input:not(:disabled):not(:checked) + label:hover::before {
+  border-color: var(--bdc);
+}
+
+main > .task.light input:checked + label::before {
+  border-color: var(--bgc);
+  background-color: var(--bgc);
+}
+
+main > .task.light .answered label::before {
+  border-color: var(--ac);
+  background-color: var(--ac);
+}
+
+main > .task.light .answered label {
+  color: var(--ac);
+}
+
+main > .task.light .invalid label::before {
+  border-color: #ff4d00;
+  background-color: #ff4d00;
+}
+
+main > .task.light .invalid label {
+  color: #ff4d00;
+}
+
+main > .task.light .button {
+  background-color: var(--bgc);
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+main > .task.light .button:hover {
+  background-color: var(--bdc);
+}
+
+/* Темная тема */
+
+main > .task.dark {
+  background-color: var(--bgc);
+  color: white;
+}
+
+main > .task.dark input + label::before {
+  border: 1.5px solid white;
+}
+
+main > .task.dark input:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #cccccc;
+}
+
+main > .task.dark input:checked + label::before {
+  border-color: white;
+  background-color: white;
+}
+
+main > .task.dark .answered label::before {
+  border-color: var(--ac);
+  background-color: var(--ac);
+}
+
+main > .task.dark .answered label {
+  color: var(--ac);
+}
+
+main > .task.dark .invalid label::before {
+  border-color: #ff4d00;
+  background-color: #ff4d00;
+}
+
+main > .task.dark .invalid label {
+  color: #ff4d00;
+}
+
+main > .task.dark .button {
+  background-color: white;
+  color: var(--bgc);
+  border-radius: 10px;
+  font-weight: 800;
+}
+
+main > .task.dark .button:hover {
+  background-color: #cccccc;
+}

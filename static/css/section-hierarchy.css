@@ -1,0 +1,165 @@
+
+:root {
+  --bgc: #101010;
+  --bdc: #2f2f2f;
+  --ac: #bdff00;
+}
+
+
+main > .hierarchy {
+  padding: 75px 150px 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main > .hierarchy .content {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main > .hierarchy h1 {
+  font-size: 50px;
+  border-bottom: 5px solid var(--ac);
+}
+
+main > .hierarchy .person {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  height: 300px;
+  border-radius: 50px;
+}
+
+main > .hierarchy .person .img {
+  background-size: cover;
+  background-position: center center;
+  width: 48%;
+  border-radius: 50px;
+}
+
+main > .hierarchy .person.leader .img {
+  background-image: url("../imgs/tanks/M18.png");
+}
+
+main > .hierarchy .person.george20097 .img {
+  background-image: url("../imgs/tanks/Т-34-85.png");
+}
+
+main > .hierarchy .person.igoreka .img {
+  background-image: url("../imgs/tanks/Pz.IV F2.png");
+}
+
+main > .hierarchy .person .texts {
+  align-self: center;
+  width: 44%;
+  padding: 4%;
+}
+
+main > .hierarchy .person h2 {
+  font-size: 30px;
+}
+
+main > .hierarchy .person .name {
+  display: flex;
+  align-items: center;
+}
+
+main > .hierarchy .person .role {
+  margin-left: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  font-weight: 600;
+  width: min-content;
+}
+
+main > .hierarchy .person .stat {
+  margin-top: 5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main > .hierarchy .person .stat > .dots {
+  width: 100%;
+  height: 10px;
+  margin: 0 10px;
+}
+
+main > .hierarchy .person .tip {
+  margin-top: 5px;
+  font-weight: 600;
+  font-size: 12px;
+  color: grey;
+}
+
+main > .hierarchy a {
+  margin-top: 50px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+/* Светлая тема */
+
+main > .hierarchy.light {
+  background-color: white;
+  color: var(--bgc);
+}
+
+main > .hierarchy.light .person {
+  background-color: #cccccc;
+}
+
+main > .hierarchy.light .person .role {
+  background-color: var(--bgc);
+  color: #cccccc;
+}
+
+main > .hierarchy.light .person .stat > .dots {
+  border-bottom: 3px dotted var(--bgc);
+}
+
+main > .hierarchy.light a {
+  background-color: var(--bgc);
+  color: white;
+}
+
+main > .hierarchy.light a:hover {
+  background-color: var(--bdc);
+}
+
+/* Темная тема */
+
+main > .hierarchy.dark {
+  background-color: var(--bgc);
+  color: white;
+}
+
+main > .hierarchy.dark .person {
+  background-color: black;
+}
+
+main > .hierarchy.dark .person .role {
+  background-color: white;
+  color: black;
+  font-weight: 800;
+}
+
+main > .hierarchy.dark .person .stat > .dots {
+  border-bottom: 3px dotted #cccccc;
+}
+
+main > .hierarchy.dark a {
+  background-color: white;
+  color: var(--bgc);
+}
+
+main > .hierarchy.dark a:hover {
+  background-color: #cccccc;
+}

@@ -1,0 +1,109 @@
+
+:root {
+  --bgc: #101010;
+  --bdc: #2f2f2f;
+  --ac: #bdff00;
+}
+
+
+main > .events {
+  padding: 75px 150px 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main > .events .content {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main > .events h1 {
+  font-size: 50px;
+  border-bottom: 5px solid var(--ac);
+}
+
+main > .events .specification {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+main > .events .specification {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+main > .events .specification .img {
+  background-size: cover;
+  background-position: center center;
+  width: 48%;
+  height: 200px;
+  border-radius: 50px;
+}
+
+main > .events .specification .img.b1 {
+  background-image: url("../imgs/banner1.png");
+}
+
+main > .events .specification .img.b2 {
+  background-image: url("../imgs/banner2.png");
+}
+
+main > .events .specification .img.b3 {
+  background-image: url("../imgs/banner3.png");
+}
+
+main > .events .specification .img.b4 {
+  background-image: url("../imgs/banner4.png");
+}
+
+main > .events .specification .img.b5 {
+  background-image: url("../imgs/banner5.png");
+}
+
+main > .events .specification .texts {
+  width: 48%;
+}
+
+main > .events .specification .texts.right-text {
+  text-align: right;
+}
+
+main > .events .specification h2 {
+  font-size: 30px;
+}
+
+main > .events .specification p {
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+/* Светлая тема */
+
+main > .events.light {
+  background-color: white;
+  color: var(--bgc);
+}
+
+main > .events.light .specification p {
+  color: grey;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+/* Темная тема */
+
+main > .events.dark {
+  background-color: var(--bgc);
+  color: white;
+}
+
+main > .events.dark .specification p {
+  color: #cccccc;
+}

@@ -1,0 +1,141 @@
+
+:root {
+  --bgc: #101010;
+  --bdc: #2f2f2f;
+  --ac: #bdff00;
+}
+
+
+main > .task-types {
+  padding: 75px 150px 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main > .task-types .content {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main > .task-types h1 {
+  font-size: 50px;
+  border-bottom: 5px solid var(--ac);
+}
+
+main > .task-types .task-type {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+main > .task-types .task-type .img {
+  background-size: cover;
+  background-position: center center;
+  width: 48%;
+  height: 300px;
+  border-radius: 50px;
+}
+
+main > .task-types .task-type .img.lcr1 {
+  background-image: url("../imgs/tanks/Leopard 2A6.png");
+}
+
+main > .task-types .task-type .img.lcr2 {
+  background-image: url("../imgs/tanks/Type 16.png");
+}
+
+main > .task-types .task-type .img.lcr3 {
+  background-image: url("../imgs/tanks/Ariete AMV.png");
+}
+
+
+main > .task-types .task-type .img.t1 {
+  background-image: url("../imgs/tanks/Т-60.png");
+}
+
+main > .task-types .task-type .img.t2 {
+  background-image: url("../imgs/tanks/Sd.Kfz.234-3.png");
+}
+
+main > .task-types .task-type .img.t3 {
+  background-image: url("../imgs/tanks/АСУ-57.png");
+}
+
+main > .task-types .task-type .texts {
+  width: 48%;
+}
+
+main > .task-types .task-type .texts.right-text {
+  text-align: right;
+}
+
+main > .task-types .task-type h2 {
+  font-size: 30px;
+}
+
+main > .task-types .task-type p {
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+main > .task-types .task-type .variant {
+  margin-bottom: 20px;
+}
+
+main > .task-types .solve {
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+main > .task-types .solve:hover {
+  cursor: pointer;
+}
+
+/* Светлая тема */
+
+main > .task-types.light {
+  background-color: white;
+  color: var(--bgc);
+}
+
+main > .task-types.light .task-type p {
+  color: grey;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+main > .task-types.light .task-type .solve {
+  background-color: var(--bgc);
+  color: white;
+  font-weight: 600;
+}
+
+main > .task-types.light .task-type .solve:hover {
+  background-color: var(--bdc);
+}
+
+/* Темная тема */
+
+main > .task-types.dark {
+  background-color: var(--bgc);
+  color: white;
+}
+
+main > .task-types.dark .task-type p {
+  color: #cccccc;
+}
+
+main > .task-types.dark .task-type .solve {
+  background-color: white;
+  color: var(--bgc);
+  font-weight: 800;
+}
+
+main > .task-types.dark .task-type .solve:hover {
+  background-color: #cccccc;
+}

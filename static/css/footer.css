@@ -1,0 +1,48 @@
+
+:root {
+  --bgc: #101010;
+  --bdc: #2f2f2f;
+  --ac: #bdff00;
+}
+
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+footer > .column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer > .left-column {
+  margin-right: 75px;
+}
+
+footer > .right-column {
+  margin-left: 75px;
+}
+
+footer h1 {
+  font-size: 30px;
+}
+
+footer > .column h2 {
+  border-bottom: 3px solid var(--ac);
+}
+
+footer > .column a {
+  color: white;
+  margin-top: 5px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+footer > .column a:hover {
+  color: #cccccc;
+}

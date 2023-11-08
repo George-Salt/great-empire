@@ -1,0 +1,102 @@
+
+:root {
+  --bgc: #101010;
+  --bdc: #2f2f2f;
+  --ac: #bdff00;
+}
+
+
+main > .about {
+  padding: 75px 150px 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main > .about .content {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main > .about h1 {
+  font-size: 50px;
+  border-bottom: 5px solid var(--ac);
+}
+
+main > .about .specification {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+main > .about .specification .img {
+  background-size: cover;
+  background-position: center center;
+  width: 48%;
+  height: 200px;
+  border-radius: 50px;
+}
+
+main > .about .specification .img.b1 {
+  background-image: url("../imgs/banner1.png");
+}
+
+main > .about .specification .img.b2 {
+  background-image: url("../imgs/banner2.png");
+}
+
+main > .about .specification .img.b3 {
+  background-image: url("../imgs/banner3.png");
+}
+
+main > .about .specification .img.b4 {
+  background-image: url("../imgs/banner4.png");
+}
+
+main > .about .specification .img.b5 {
+  background-image: url("../imgs/banner5.png");
+}
+
+main > .about .specification .texts {
+  width: 48%;
+}
+
+main > .about .specification .texts.right-text {
+  text-align: right;
+}
+
+main > .about .specification h2 {
+  font-size: 30px;
+}
+
+main > .about .specification p {
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+/* Светлая тема */
+
+main > .about.light {
+  background-color: white;
+  color: var(--bgc);
+}
+
+main > .about.light .specification p {
+  color: grey;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+/* Темная тема */
+
+main > .about.dark {
+  background-color: var(--bgc);
+  color: white;
+}
+
+main > .about.dark .specification p {
+  color: #cccccc;
+}
