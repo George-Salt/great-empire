@@ -21,7 +21,7 @@ main > .task .content {
 }
 
 main > .task h1 {
-  font-size: 50px;
+  text-align: center;
   border-bottom: 5px solid var(--ac);
 }
 
@@ -39,7 +39,7 @@ main > .task form {
 }
 
 main > .task h2 {
-  width: min-content;
+  width: 100%;
   font-size: 30px;
   margin-bottom: 5px;
 }
@@ -130,7 +130,6 @@ main > .task.light .invalid label {
 main > .task.light .button {
   background-color: var(--bgc);
   color: white;
-  border-radius: 10px;
   font-weight: 600;
 }
 
@@ -179,10 +178,42 @@ main > .task.dark .invalid label {
 main > .task.dark .button {
   background-color: white;
   color: var(--bgc);
-  border-radius: 10px;
   font-weight: 800;
 }
 
 main > .task.dark .button:hover {
   background-color: #cccccc;
+}
+
+@media screen and (min-width: 820px) {
+  main > .task h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  main > .task {
+    padding: 75px 0 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main > .task .content {
+    width: 90vw;
+  }
+
+  main > .task img {
+    width: 100%;
+    margin-top: 25px;
+  }
+  
+  main > .task form {
+    margin-top: 25px;
+    width: 100%;
+  }
+
+  main > .task h1 {
+    font-size: 35px;
+  }
 }

@@ -25,63 +25,48 @@ main > .events h1 {
   border-bottom: 5px solid var(--ac);
 }
 
-main > .events .specification {
+main > .events .event {
+  text-align: center;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
   margin-top: 50px;
 }
 
-main > .events .specification {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
+main > .events .event .texts {
+  margin-bottom: 25px;
 }
 
-main > .events .specification .img {
+main > .events .event .img {
   background-size: cover;
   background-position: center center;
-  width: 48%;
-  height: 200px;
+  width: 100%;
+  height: 300px;
   border-radius: 50px;
 }
 
-main > .events .specification .img.b1 {
-  background-image: url("../imgs/banner1.png");
+main > .events .event .img.revenge-for-brother {
+  background-image: url("../imgs/events/Месть За Брата.png");
 }
 
-main > .events .specification .img.b2 {
-  background-image: url("../imgs/banner2.png");
-}
-
-main > .events .specification .img.b3 {
-  background-image: url("../imgs/banner3.png");
-}
-
-main > .events .specification .img.b4 {
-  background-image: url("../imgs/banner4.png");
-}
-
-main > .events .specification .img.b5 {
-  background-image: url("../imgs/banner5.png");
-}
-
-main > .events .specification .texts {
-  width: 48%;
-}
-
-main > .events .specification .texts.right-text {
-  text-align: right;
-}
-
-main > .events .specification h2 {
+main > .events .event h2 {
+  margin-top: 30px;
   font-size: 30px;
 }
 
-main > .events .specification p {
+main > .events .event p {
   margin-top: 5px;
   font-weight: 600;
+}
+
+main > .events a {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+  width: min-content;
+  transition: all 0.3s;
+}
+
+main > .events a:hover {
+  cursor: pointer;
 }
 
 /* Светлая тема */
@@ -91,10 +76,20 @@ main > .events.light {
   color: var(--bgc);
 }
 
-main > .events.light .specification p {
+main > .events.light .event p {
   color: grey;
   margin-top: 5px;
   font-weight: 600;
+}
+
+main > .events.light a {
+  background-color: var(--bgc);
+  color: white;
+  font-weight: 600;
+}
+
+main > .events.light a:hover {
+  background-color: var(--bdc);
 }
 
 /* Темная тема */
@@ -104,6 +99,16 @@ main > .events.dark {
   color: white;
 }
 
-main > .events.dark .specification p {
+main > .events.dark .event p {
   color: #cccccc;
+}
+
+main > .events.dark a {
+  background-color: white;
+  color: var(--bgc);
+  font-weight: 800;
+}
+
+main > .events.dark a:hover {
+  background-color: #cccccc;
 }

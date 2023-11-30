@@ -21,7 +21,7 @@ main > .task-types .content {
 }
 
 main > .task-types h1 {
-  font-size: 50px;
+  text-align: center;
   border-bottom: 5px solid var(--ac);
 }
 
@@ -53,25 +53,43 @@ main > .task-types .task-type .img.lcr3 {
 }
 
 
-main > .task-types .task-type .img.t1 {
+main > .task-types .task-type .img.wkot1 {
   background-image: url("../imgs/tanks/Т-60.png");
 }
 
-main > .task-types .task-type .img.t2 {
+main > .task-types .task-type .img.wkot2 {
   background-image: url("../imgs/tanks/Sd.Kfz.234-3.png");
 }
 
-main > .task-types .task-type .img.t3 {
+main > .task-types .task-type .img.wkot3 {
   background-image: url("../imgs/tanks/АСУ-57.png");
 }
 
-main > .task-types .task-type .texts {
-  width: 48%;
+
+main > .task-types .task-type .img.wnot1 {
+  background-image: url("../imgs/tanks/M36 (Япония).png");
 }
 
-main > .task-types .task-type .texts.right-text {
-  text-align: right;
+main > .task-types .task-type .img.wnot2 {
+  background-image: url("../imgs/tanks/M4A2 (СССР).png");
 }
+
+main > .task-types .task-type .img.wnot3 {
+  background-image: url("../imgs/tanks/Т-62 545 (Китай).png");
+}
+
+main > .task-types .task-type .img.wnot4 {
+  background-image: url("../imgs/tanks/ЗСУ-57-2.png");
+}
+
+main > .task-types .task-type .img.wnot5 {
+  background-image: url("../imgs/tanks/QF 3.7 Ram.png");
+}
+
+main > .task-types .task-type .img.wnot6 {
+  background-image: url("../imgs/tanks/Toldi IIA.png");
+}
+
 
 main > .task-types .task-type h2 {
   font-size: 30px;
@@ -138,4 +156,50 @@ main > .task-types.dark .task-type .solve {
 
 main > .task-types.dark .task-type .solve:hover {
   background-color: #cccccc;
+}
+
+@media screen and (min-width: 820px) {
+  main > .task-types h1 {
+    font-size: 50px;
+  }
+
+  main > .task-types .task-type .texts {
+    width: 48%;
+  }
+
+  main > .task-types .task-type .texts.right-text {
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  main > .task-types {
+    padding: 75px 0 75px;
+  }
+
+  main > .task-types .content {
+    width: 90vw;
+  }
+
+  main > .task-types h1 {
+    font-size: 35px;
+  }
+
+  main > .task-types .task-type {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  main > .task-types .task-type.reversed {
+    flex-direction: column-reverse;
+  }
+
+  main > .task-types .task-type .img {
+    width: 100%;
+  }
+
+  main > .task-types .task-type .texts {
+    width: 100%;
+    margin-top: 25px;
+  }
 }

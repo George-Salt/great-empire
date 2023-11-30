@@ -157,6 +157,7 @@ main > .hierarchy.dark .person .stat > .dots {
 
 main > .hierarchy.dark a {
   background-color: white;
+  font-weight: 800;
   color: var(--bgc);
 }
 
