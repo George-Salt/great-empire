@@ -1,6 +1,6 @@
 let validAnswerContainer = document.querySelector("main > .task .valid");
 let answers = document.querySelectorAll("main > .task .answer");
-let button = document.querySelector("main > .task .button");
+let button = document.querySelector("main > .task form > .button");
 let solution = document.querySelector("main > .task .solution");
 
 

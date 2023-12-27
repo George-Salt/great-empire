@@ -1,23 +1,9 @@
 
-:root {
-  --bgc: #101010;
-  --bdc: #2f2f2f;
-  --ac: #bdff00;
-}
-
-
 main > .about {
-  padding: 75px 150px 75px;
+  padding: 75px 0 75px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-main > .about .content {
-  width: 1000px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 main > .about h1 {
@@ -29,6 +15,9 @@ main > .about .specification {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+main > .about .specification + .specification {
   margin-top: 50px;
 }
 

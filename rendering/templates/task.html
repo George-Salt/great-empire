@@ -21,7 +21,7 @@
 
 <body>
   <header>
-    <a href="../../../../#section-about" class="link margin-right">Вступить</a>
+    <a href="../../../../#section-join" class="link margin-right">Вступить</a>
     <a href="../../../../#section-events" class="link margin-right">События</a>
     <a href="../../../../#section-about" class="link margin-right">Про полк</a>
 
@@ -37,7 +37,7 @@
       <div class="content">
         <h1 class="topic">{{ topic }}</h1>
 
-        <img src="{{ image }}">
+        {% if image %}<img src="{{ image }}">{% endif %}
 
         <form>
           <h2>{{ question }}</h2>

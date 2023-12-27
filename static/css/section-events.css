@@ -1,36 +1,8 @@
 
-:root {
-  --bgc: #101010;
-  --bdc: #2f2f2f;
-  --ac: #bdff00;
-}
-
-
-main > .events {
-  padding: 75px 150px 75px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-main > .events .content {
-  width: 1000px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-main > .events h1 {
-  font-size: 50px;
-  border-bottom: 5px solid var(--ac);
-}
-
 main > .events .event {
   text-align: center;
   width: 100%;
-  margin-top: 50px;
 }
-
 main > .events .event .texts {
   margin-bottom: 25px;
 }
@@ -57,24 +29,7 @@ main > .events .event p {
   font-weight: 600;
 }
 
-main > .events a {
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 10px;
-  width: min-content;
-  transition: all 0.3s;
-}
-
-main > .events a:hover {
-  cursor: pointer;
-}
-
 /* Светлая тема */
-
-main > .events.light {
-  background-color: white;
-  color: var(--bgc);
-}
 
 main > .events.light .event p {
   color: grey;
@@ -82,33 +37,8 @@ main > .events.light .event p {
   font-weight: 600;
 }
 
-main > .events.light a {
-  background-color: var(--bgc);
-  color: white;
-  font-weight: 600;
-}
-
-main > .events.light a:hover {
-  background-color: var(--bdc);
-}
-
 /* Темная тема */
-
-main > .events.dark {
-  background-color: var(--bgc);
-  color: white;
-}
 
 main > .events.dark .event p {
   color: #cccccc;
-}
-
-main > .events.dark a {
-  background-color: white;
-  color: var(--bgc);
-  font-weight: 800;
-}
-
-main > .events.dark a:hover {
-  background-color: #cccccc;
 }

@@ -1,6 +1,7 @@
 import os
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+import jinja2
 
 
 TASKS_INFO = {
@@ -151,7 +152,35 @@ TASKS_INFO = {
 }
 
 
-def render_task_page(task_template, id, topic, question, answers, solution, path, image=None):
+def get_filled_footer():
+	return f"""\
+	<footer>
+		<div class="column left-column">
+			<h2>Разделы&nbsp;сайта</h2>
+			<a href="blog/trainings/">Тесты&nbsp;для&nbsp;танкистов</a>
+			<a href="about/people/">Состав&nbsp;полка</a>
+			<a href="blog/articles/">Полезные&nbsp;статьи</a>
+		</div>
+
+		<h1>Великая Империя</h1>
+		
+		<div class="column right-column">
+			<h2>Разработка</h2>
+			<a href="https://george-salt.github.io/home/">Жора Соляник</a>
+		</div>
+	</footer>"""
+
+
+def render_task_page(
+	task_template: jinja2.Template,
+	id,
+	topic,
+	question,
+	answers,
+	solution,
+	path,
+	image=None
+):
 	rendered_page = task_template.render(
 		id=id,
 		topic=topic,
@@ -161,15 +190,15 @@ def render_task_page(task_template, id, topic, question, answers, solution, path
 		solution=solution
 	)
 
-	with open(f"../{path}/index.html", "w", encoding="utf8") as file:
+	with open(f"../blog/trainings/{path}/index.html", "w", encoding="utf8") as file:
 		file.write(rendered_page)
 
 
-def render_all_pages(task_template):
+def render_all_tasks_pages(task_template: jinja2.Template):
 	for task_type, task_type_params in TASKS_INFO.items():
-		os.makedirs(f"../{task_type}", exist_ok=True)
+		os.makedirs(f"../blog/trainings/{task_type}", exist_ok=True)
 		for number_id, number_params in task_type_params["numbers"].items():
-			os.makedirs(f"../{task_type}/{number_id}", exist_ok=True)
+			os.makedirs(f"../blog/trainings/{task_type}/{number_id}", exist_ok=True)
 			render_task_page(
 				task_template,
 				number_id,
@@ -184,9 +213,9 @@ def render_all_pages(task_template):
 
 if __name__ == "__main__":
 	env = Environment(
-		loader=FileSystemLoader("."),
+		loader=FileSystemLoader("./templates"),
 		autoescape=select_autoescape(["html"])
 	)
-	task_template = env.get_template("task-template.html")
+	task_template = env.get_template("task.html")
 
-	render_all_pages(task_template)
+	render_all_tasks_pages(task_template)

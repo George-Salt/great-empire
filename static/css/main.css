@@ -1,10 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap");
 
 
 :root {
-  --bgc: #101010;
-  --bdc: #2f2f2f;
-  --ac: #bdff00;
+  --background-color-dark: #101010;
+  --element-color-dark: #1f1f1f;
+  --border-color-dark: #2f2f2f;
+
+  --background-color-light: #ffffff;
+  --element-color-light: #eeeeee;
+  --border-color-light: #cccccc;
+
+  --accent-color: #bdff00;
 }
 
 
@@ -18,7 +24,7 @@ html {
 }
 
 body {
-  background-color: var(--bgc);
+  background-color: var(--background-color-dark);
   font-family: "Montserrat", sans-serif;
 }
 
@@ -27,17 +33,70 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background-color: var(--bgc);
+  background-color: var(--background-color-dark);
   width: 1vw;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--bdc);
+  background-color: var(--element-color-dark);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
 }
 
 a {
   color: var(--bgc);
   text-decoration: none;
+}
+
+
+main > section {
+  padding: 75px 0 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main > section.light {
+  background: var(--background-color-light);
+  color: var(--background-color-dark);
+}
+
+main > section.dark {
+  background: var(--background-color-dark);
+  color: var(--background-color-light);
+}
+
+main > section .content {
+  width: 1000px;
+  max-width: 95vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main > section h1.topic {
+  font-size: 50px;
+  border-bottom: 5px solid var(--ac);
+  margin-bottom: 50px;
+}
+
+main > section h2 {
+  font-size: 30px;
+}
+
+main > section.dark p {
+  font-weight: 600;
+}
+
+main > section.light p {
+  font-weight: 700;
+}
+
+main > section.first {
+  padding-top: 125px;
 }
 
 
@@ -51,10 +110,12 @@ main > .cover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 main > .cover img {
-  width: 350px;
+  width: 300px;
+  margin: 50px 0;
 }
 
 main > .cover h1.name {
@@ -63,7 +124,32 @@ main > .cover h1.name {
   text-shadow: 0px 0px 50px var(--bgc);
 }
 
+/* BUTTON */
 
-main > section.first {
-  padding-top: 125px;
+main > section .button {
+  padding: 10px;
+  border-radius: 10px;
+  width: min-content;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+main > section.light .button {
+  background-color: var(--bgc);
+  color: white;
+  font-weight: 700;
+}
+
+main > section.light .button:hover {
+  box-shadow: 0px 0px 100px var(--accent-color);
+}
+
+main > section.dark .button {
+  background-color: white;
+  color: var(--background-color-dark);
+  font-weight: 800;
+}
+
+main > section.dark .button:hover {
+  background-color: #cccccc;
 }

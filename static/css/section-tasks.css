@@ -33,7 +33,7 @@ main > .tasks .tasks-type {
   justify-content: center;
   padding: 50px;
   margin-top: 50px;
-  height: 100px;
+  min-height: 100px;
   border-radius: 50px;
 }
 

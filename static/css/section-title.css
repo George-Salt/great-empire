@@ -1,0 +1,42 @@
+
+:root {
+  --bgc: #101010;
+  --bdc: #2f2f2f;
+  --ac: #bdff00;
+}
+
+
+main > .title {
+  padding: 75px 150px 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ac);
+}
+
+main > .title .content {
+  width: 1000px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+main > .title h1 {
+  font-size: 50px;
+}
+
+main > .title .badges {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+main > .title .badges img {
+  width: 150px;
+  height: 150px;
+}
+
+main > .title .badges img + img {
+  margin-left: 10px;
+}
