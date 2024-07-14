@@ -147,8 +147,37 @@ TASKS_INFO = {
 				},
 				"solution": "На картинке изображен Toldi IIA - венгерский лёгкий танк времён Второй Мировой войны.",
 			},
-		}
-	}
+		},
+	},
+	"wkot": {
+		"topic": "Что за танк?",
+		"question": "Какой танк изображен на картинке?",
+		"numbers": {
+			"1": {
+				"difficulty": "Средняя",
+				"image": "Т-60.png",
+				"answers": {
+					"1": {
+						"name": "Т-70",
+						"is_valid": False
+					},
+					"2": {
+						"name": "Т-44",
+						"is_valid": False
+					},
+					"3": {
+						"name": "Т-60",
+						"is_valid": True
+					},
+					"4": {
+						"name": "Т-26",
+						"is_valid": False
+					}
+				},
+				"solution": "На картинке изображен Т-60 - советский легкий танк периода Второй Мировой.",
+			},
+		},
+	},
 }
 
 
@@ -171,19 +200,11 @@ def get_filled_footer():
 	</footer>"""
 
 
-def render_task_page(
-	task_template: jinja2.Template,
-	id,
-	topic,
-	question,
-	answers,
-	solution,
-	path,
-	image=None
-):
+def render_task_page(task_template: jinja2.Template, id, topic, question, difficulty, answers, solution, path, image=None):
 	rendered_page = task_template.render(
 		id=id,
 		topic=topic,
+		difficulty=difficulty,
 		image=f"../../../../static/imgs/tanks/{image}",
 		question=question,
 		answers=answers,
@@ -204,6 +225,7 @@ def render_all_tasks_pages(task_template: jinja2.Template):
 				number_id,
 				task_type_params["topic"],
 				task_type_params["question"],
+				number_params["difficulty"],
 				number_params["answers"],
 				number_params["solution"],
 				f"{task_type}/{number_id}",

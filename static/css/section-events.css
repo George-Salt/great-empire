@@ -2,9 +2,12 @@
 main > .events .event {
   text-align: center;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 main > .events .event .texts {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 main > .events .event .img {
@@ -13,32 +16,21 @@ main > .events .event .img {
   width: 100%;
   height: 300px;
   border-radius: 50px;
+  margin-bottom: 25px;
 }
 
 main > .events .event .img.revenge-for-brother {
   background-image: url("../imgs/events/Месть За Брата.png");
 }
 
-main > .events .event h2 {
-  margin-top: 30px;
-  font-size: 30px;
-}
-
-main > .events .event p {
-  margin-top: 5px;
-  font-weight: 600;
-}
-
 /* Светлая тема */
 
 main > .events.light .event p {
-  color: grey;
-  margin-top: 5px;
-  font-weight: 600;
+  color: var(--border-color-dark);
 }
 
 /* Темная тема */
 
 main > .events.dark .event p {
-  color: #cccccc;
+  color: var(--border-color-light);
 }

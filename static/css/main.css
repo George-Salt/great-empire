@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Flow+Circular&display=swap");
 
 
 :root {
@@ -26,6 +28,8 @@ html {
 body {
   background-color: var(--background-color-dark);
   font-family: "Montserrat", sans-serif;
+  font-family: "Unbounded", sans-serif;
+  /* font-family: "Flow Circular", sans-serif; */
 }
 
 body::-webkit-scrollbar {
@@ -38,7 +42,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--element-color-dark);
+  background-color: var(--border-color-dark);
 }
 
 
@@ -46,14 +50,17 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
 }
 
+h1 {
+  text-align: center;
+}
+
 a {
-  color: var(--bgc);
   text-decoration: none;
 }
 
 
 main > section {
-  padding: 75px 0 75px;
+  padding: 100px 0 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,24 +82,26 @@ main > section .content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 50px;
+  transition: gap 0.3s;
 }
 
 main > section h1.topic {
   font-size: 50px;
-  border-bottom: 5px solid var(--ac);
-  margin-bottom: 50px;
+  border-bottom: 5px solid var(--accent-color);
+  width: fit-content;
 }
 
 main > section h2 {
   font-size: 30px;
 }
 
-main > section.dark p {
-  font-weight: 600;
+main > section.light p {
+  font-weight: 500;
 }
 
-main > section.light p {
-  font-weight: 700;
+main > section.dark p {
+  font-weight: 400;
 }
 
 main > section.first {
@@ -110,18 +119,47 @@ main > .cover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  gap: 50px;
 }
 
 main > .cover img {
   width: 300px;
-  margin: 50px 0;
+}
+
+main > .cover .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 main > .cover h1.name {
   font-size: 50px;
-  color: white;
-  text-shadow: 0px 0px 50px var(--bgc);
+  color: var(--background-color-light);
+  text-shadow: 0px 0px 50px var(--background-color-dark);
+}
+
+main > .cover .socials {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+main > .cover .socials a {
+  height: 16px;
+  backdrop-filter: blur(20px);
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 15px;
+  color: var(--background-color-light);
+  display: flex;
+  align-items: center;
+  gap: 5px
+}
+
+main > .cover .socials i {
+  display: ;
+  height: 16px;
 }
 
 /* BUTTON */
@@ -129,27 +167,33 @@ main > .cover h1.name {
 main > section .button {
   padding: 10px;
   border-radius: 10px;
-  width: min-content;
-  transition: all 0.3s;
+  width: fit-content;
+  transition: all 0.5s;
   cursor: pointer;
 }
 
 main > section.light .button {
-  background-color: var(--bgc);
-  color: white;
+  background-color: var(--background-color-dark);
+  color: var(--background-color-light);
   font-weight: 700;
 }
-
+/* 
 main > section.light .button:hover {
+  background-color: var(--border-color-dark);
   box-shadow: 0px 0px 100px var(--accent-color);
-}
+} */
 
 main > section.dark .button {
-  background-color: white;
+  background-color: var(--background-color-light);
   color: var(--background-color-dark);
   font-weight: 800;
 }
-
+/* 
 main > section.dark .button:hover {
-  background-color: #cccccc;
+  background-color: var(--border-color-light);
+} */
+
+main > section .button:hover {
+  background-color: var(--accent-color);
+  color: var(--background-color-dark);
 }

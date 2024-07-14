@@ -11,7 +11,9 @@
 
   <title>=I22I= Великая Империя</title>
 
-  <link href="static/imgs/favicon.png" rel="icon" />
+  <link href="https://cdn-uicons.flaticon.com/2.4.2/uicons-brands/css/uicons-brands.css" rel="stylesheet" type="text/css" />
+
+  <link href="static/imgs/favicon.png" rel="icon" type="image/png" />
 
   <link href="static/css/header.css" rel="stylesheet" type="text/css" />
   <link href="static/css/section-about.css" rel="stylesheet" type="text/css" />
@@ -23,64 +25,90 @@
 
 <body>
   <header>
-    <a href="#section-join" class="link margin-right">Вступить</a>
-    <a href="#section-events" class="link margin-right">События</a>
-    <a href="#section-about" class="link margin-right">Про полк</a>
+    <div class="row">
+      <div class="main-link">
+        <a href="#section-cover">
+          <img src="static/imgs/logo-wo-bg.png" class="icon">
+        </a>
+      </div>
+  
+      <div class="links">
+        <a href="about/people/" class="link margin-left">Состав</a>
+        <a href="blog/" class="link margin-left">Блог</a>
+        <a href="top/" class="link margin-left">Топы</a>
+      </div>
+    </div>
 
-    <a href="#section-cover" class="name">=I22I=</a>
+    <div class="row">
+      <div class="socials">
+        <a href="https://t.me/BeJIuka9IuMnEpu9II22I" class="link social margin-left" target="_blank"><i class="fi fi-brands-telegram"></i></a>
+        <a href="https://discord.gg/47fRgMfKC4" class="link social margin-left" target="_blank"><i class="fi fi-brands-discord"></i></a>
 
-    <a href="about/people/" class="link margin-left">Состав</a>
-    <a href="blog/" class="link margin-left">Блог</a>
-    <a href="top/" class="link margin-left">Топы</a>
+        <div class="button">Вступить</div>
+      </div>
+    </div>
   </header>
 
   <main>
     <div class="cover" id="section-cover">
       <img src="static/imgs/logo-wo-bg.png">
-      <h1 class="name">Великая Империя</h1>
+
+      <div class="text">
+        <h1 class="name">Великая Империя</h1>
+
+        <div class="socials">
+          <a href="https://discord.gg/47fRgMfKC4" class="link social margin-left" target="_blank"><i class="fi fi-brands-discord"></i> Discord</a>
+          <a href="https://t.me/BeJIuka9IuMnEpu9II22I" class="link social margin-left" target="_blank"><i class="fi fi-brands-telegram"></i> Telegram</a>
+        </div>
+      </div>
     </div>
 
-    <section class="about dark" id="section-about">
+    <section class="img-text-chess-order-1-1 dark" id="about">
       <div class="content">
         <h1 class="topic">Про полк</h1>
 
-        <div class="specification">
-          <div class="img b1"></div>
-          <div class="texts">
+        <div class="item text-left">
+          <img class="img" src="static/imgs/banner1.png">
+
+          <div class="text">
             <h2>Высокий боевой рейтинг</h2>
-            <p>Наши профессионалы достигли самых высот в&nbsp;игре, на это их мотивировали наши призы!</p>
+            <p class="desc">Наши профессионалы достигли самых высот в&nbsp;игре, на это их мотивировали наши призы!</p>
           </div>
         </div>
 
-        <div class="specification">
-          <div class="texts right-text">
-            <h2>Призовые роли</h2>
-            <p>Участвуя в&nbsp;развитии полка и&nbsp;Дискорд-сервера, вы получаете уникальные роли и&nbsp;промокоды!</p>
+        <div class="item text-right">
+          <div class="text">
+            <h2>Челленджи и призы</h2>
+            <p class="desc">Участвуя в&nbsp;событиях или продвижении полка, вы получаете уникальные роли на сервере, пользовательские камуфляжи и&nbsp;промокоды!</p>
           </div>
-          <div class="img b2"></div>
+
+          <img class="img" src="static/imgs/banner2.png">
         </div>
 
-        <div class="specification">
-          <div class="img b3"></div>
-          <div class="texts">
-            <h2>Профессиональный состав</h2>
-            <p>С&nbsp;легкостью выполняем фигуры высшего пилотажа и&nbsp;забираем 10-15 фрагов себе в&nbsp;копилку каждый бой!</p>
+        <div class="item text-left">
+          <img class="img" src="static/imgs/banner3.png">
+
+          <div class="text">
+            <h2>Мы - профи</h2>
+            <p class="desc">С&nbsp;легкостью выполняем фигуры высшего пилотажа и&nbsp;забираем 10-15 фрагов себе в&nbsp;копилку каждый бой!</p>
           </div>
         </div>
 
-        <div class="specification">
-          <div class="texts right-text">
-            <h2>Индивидуальность</h2>
-            <p>У нас нет строгих правил выбора нации, а&nbsp;также, вы сами решаете, играть в&nbsp;аркадном режиме или в&nbsp;реалистичном!</p>
+        <div class="item text-right">
+          <div class="text">
+            <h2>Демократия</h2>
+            <p class="desc">У нас нет строгих правил выбора нации, а&nbsp;также, вы сами решаете, играть в&nbsp;аркадном режиме или в&nbsp;реалистичном!</p>
           </div>
-          <div class="img b4"></div>
+
+          <img class="img" src="static/imgs/banner4.png">
         </div>
 
-        <div class="specification">
-          <div class="img b5"></div>
-          <div class="texts">
+        <div class="item text-left">
+          <img class="img" src="static/imgs/banner5.png">
+
+          <div class="text">
             <h2>Великолепные кадры</h2>
-            <p>Мы часто публикуем на&nbsp;нашем Дискорд-сервере повторы сногсшибательных, великолепных боев и&nbsp;награждаем игроков!</p>
+            <p class="desc">Мы часто публикуем на&nbsp;нашем Дискорд-сервере повторы сногсшибательных, великолепных боев и&nbsp;награждаем игроков!</p>
           </div>
         </div>
       </div>
@@ -126,11 +154,19 @@
           </div>
         </div>
 
-        <a class="button" href="about/people/">Посмотреть&nbsp;других&nbsp;участников</a>
+        <a class="button" href="about/people/">Посмотреть всех</a>
       </div>
     </section>
 
-    <section class="events dark" id="section-events">
+    <!-- <section class="products dark" id="section-products">
+      <div class="content">
+        <h1 class="topic">Новые товары</h1>
+
+        <div class="cards"></div>
+      </div>
+    </section> -->
+
+    <!-- <section class="events dark" id="section-events">
       <div class="content">
         <h1 class="topic">События</h1>
 
@@ -146,9 +182,9 @@
           <a class="button" href="about/join-event/">Принять&nbsp;участие</a>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="join light" id="section-join">
+    <!-- <section class="join light" id="section-join">
       <div class="content">
         <h1 class="topic">Как вступить в полк</h1>
 
@@ -156,14 +192,14 @@
           <div class="img revenge-for-brother"></div>
           <div class="texts">
             <h2>«Месть За Брата»</h2>
-            <p class="days-remaining">До конца события: 0 д.</p>
-            <p>Главная техника события: ИС-2</p>
+            <p class="desc days-remaining">До конца события: 0 д.</p>
+            <p class="desc">Главная техника события: ИС-2</p>
           </div>
 
           <a class="button" href="about/join-event/">Принять&nbsp;участие</a>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
 
   <footer>

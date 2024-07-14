@@ -1,24 +1,11 @@
 
-main > .hierarchy .content > div:last-child {
-  margin-bottom: 0;
-}
-
 main > .hierarchy .person {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
+  gap: 50px;
   height: 300px;
   border-radius: 50px;
-}
-
-main > .hierarchy .person .img {
-  background-size: cover;
-  background-position: center center;
-  width: 48%;
-  border-radius: 50px;
-  border-top-left-radius: 48px;
-  border-bottom-left-radius: 48px;
 }
 
 main > .hierarchy .person.leader .img {
@@ -26,47 +13,55 @@ main > .hierarchy .person.leader .img {
 }
 
 main > .hierarchy .person.george20097 .img {
-  background-image: url("../imgs/tanks/Т-34-85.png");
+  background-image: url("../imgs/tanks/Т-44-100.png");
+  background-position: left center;
 }
 
 main > .hierarchy .person.igoreka .img {
   background-image: url("../imgs/tanks/Pz.IV F2.png");
 }
 
+main > .hierarchy .person.mmish14 .img {
+  background-image: url("../imgs/tanks/Tiger II (H).png");
+  background-position: right center;
+}
+
 main > .hierarchy .person .texts {
   align-self: center;
-  width: 44%;
-  padding: 4%;
+  width: calc(50% - 75px);
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: all 0.3s;
 }
 
 main > .hierarchy .person .name {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 main > .hierarchy .person .role {
-  margin-left: 10px;
+  margin-bottom: 5px;
   border-radius: 10px;
   padding: 5px;
-  width: min-content;
+  width: fit-content;
 }
 
 main > .hierarchy .person .stat {
-  margin-top: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
 }
 
 main > .hierarchy .person .stat > .dots {
   width: 100%;
   height: 10px;
-  margin: 0 10px;
 }
 
 main > .hierarchy .person .tip {
-  margin-top: 5px;
-  font-weight: 600;
   font-size: 12px;
   color: grey;
 }
@@ -102,4 +97,63 @@ main > .hierarchy.dark .person .role {
 
 main > .hierarchy.dark .person .stat > .dots {
   border-bottom: 3px dotted var(--border-color-light);
+}
+
+
+@media screen and (min-width: 1000px) {
+  main > .hierarchy .person .img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: calc(50% - 25px);
+    border-radius: 50px;
+    border-top-left-radius: 48px;
+    border-bottom-left-radius: 48px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  main > .hierarchy .person .img {
+    display: none;
+  }
+
+  main > .hierarchy .person .texts {
+    width: 100%;
+    margin: 0 50px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  main > .hierarchy .person .role {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main > .hierarchy .person .texts {
+    margin: 25px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main > .hierarchy .content {
+    gap: 15px;
+  }
+
+  main > .hierarchy .person {
+    height: fit-content;
+    border-radius: 25px;
+  }
+
+  main > .hierarchy .person .name h2 {
+    margin: 0;
+  }
+
+  main > .hierarchy .person .stat {
+    display: none;
+  }
+
+  main > .hierarchy .person .tip {
+    display: none;
+  }
 }

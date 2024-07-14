@@ -15,12 +15,10 @@ main > .task .info .difficulty {
 
 main > .task img {
   width: 75%;
-  margin-top: 50px;
   border-radius: 50px;
 }
 
 main > .task form {
-  margin-top: 50px;
   display: flex;
   flex-direction: column;
   width: 75%;
@@ -53,7 +51,7 @@ main > .task input + label::before {
   margin-right: 10px;
 }
 
-main > .task input:not(:disabled):not(:checked) + label:hover::before {
+main > .task input:not(:disabled):not(:checked) + label:hover {
   cursor: pointer;
 }
 
@@ -67,31 +65,30 @@ main > .task .solution {
 
 /* Светлая тема */
 
-main > .task.light {
-  background-color: white;
-  color: var(--bgc);
-}
-
 main > .task.light input + label::before {
-  border: 1.5px solid var(--bgc);
+  border: 1.5px solid var(--background-color-dark);
 }
 
 main > .task.light input:not(:disabled):not(:checked) + label:hover::before {
-  border-color: var(--bdc);
+  border-color: var(--border-color-dark);
+}
+
+main > .task.light input:not(:disabled):not(:checked) + label:hover {
+  color: var(--border-color-dark);
 }
 
 main > .task.light input:checked + label::before {
-  border-color: var(--bgc);
-  background-color: var(--bgc);
+  border-color: var(--background-color-dark);
+  background-color: var(--background-color-dark);
 }
 
 main > .task.light .answered label::before {
-  border-color: var(--ac);
-  background-color: var(--ac);
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 main > .task.light .answered label {
-  color: var(--ac);
+  color: var(--accent-color);
 }
 
 main > .task.light .invalid label::before {
@@ -105,31 +102,30 @@ main > .task.light .invalid label {
 
 /* Темная тема */
 
-main > .task.dark {
-  background-color: var(--bgc);
-  color: white;
-}
-
 main > .task.dark input + label::before {
-  border: 1.5px solid white;
+  border: 2px solid var(--background-color-light);
 }
 
 main > .task.dark input:not(:disabled):not(:checked) + label:hover::before {
-  border-color: #cccccc;
+  border-color: var(--border-color-light);
+}
+
+main > .task.dark input:not(:disabled):not(:checked) + label:hover {
+  color: var(--border-color-light);
 }
 
 main > .task.dark input:checked + label::before {
-  border-color: white;
-  background-color: white;
+  border-color: var(--background-color-light);
+  background-color: var(--background-color-light);
 }
 
 main > .task.dark .answered label::before {
-  border-color: var(--ac);
-  background-color: var(--ac);
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 main > .task.dark .answered label {
-  color: var(--ac);
+  color: var(--accent-color);
 }
 
 main > .task.dark .invalid label::before {
@@ -157,11 +153,9 @@ main > .task.dark .invalid label {
 
   main > .task img {
     width: 100%;
-    margin-top: 25px;
   }
 
   main > .task form {
-    margin-top: 25px;
     width: 100%;
   }
 

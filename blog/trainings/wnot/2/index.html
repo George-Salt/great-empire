@@ -9,7 +9,9 @@
   <meta name="author" content="=I22I= Великая Империя">
   <meta name="description" content="Официальный сайт лучшего полка =I22I= в War Thunder! Вступай к нам - ни за что не пожалеешь! Мы часто проводим интересные события с заманчивыми призами, создаем новые тесты для танкистов и радуем совместной игрой!">
 
-  <title>=I22I= Великая Империя | Какой нации принадлежит? | Вариант 2</title>
+  <title>=I22I= Великая Империя | Какой нации принадлежит? | № 2</title>
+
+  <link href="https://cdn-uicons.flaticon.com/2.4.2/uicons-brands/css/uicons-brands.css" rel="stylesheet" type="text/css" />
 
   <link href="../../../../static/imgs/favicon.png" rel="icon" />
 
@@ -21,15 +23,28 @@
 
 <body>
   <header>
-    <a href="../../../../#section-about" class="link margin-right">Вступить</a>
-    <a href="../../../../#section-events" class="link margin-right">События</a>
-    <a href="../../../../#section-about" class="link margin-right">Про полк</a>
+    <div class="row">
+      <div class="main-link">
+        <a href="../../../../#section-cover">
+          <img src="../../../../static/imgs/logo-wo-bg.png" class="icon">
+        </a>
+      </div>
+  
+      <div class="links">
+        <a href="../../../../about/people/" class="link margin-left">Состав</a>
+        <a href="../../../../blog/" class="link margin-left">Блог</a>
+        <a href="../../../../top/" class="link margin-left">Топы</a>
+      </div>
+    </div>
 
-    <a href="../../../../" class="name">=I22I=</a>
+    <div class="row">
+      <div class="socials">
+        <a href="https://t.me/BeJIuka9IuMnEpu9II22I" class="link social margin-left" target="_blank"><i class="fi fi-brands-telegram"></i></a>
+        <a href="https://discord.gg/47fRgMfKC4" class="link social margin-left" target="_blank"><i class="fi fi-brands-discord"></i></a>
 
-    <a href="../../../../about/people/" class="link margin-left">Состав</a>
-    <a href="../../../../blog/" class="link margin-left">Блог</a>
-    <a href="../../../../top/" class="link margin-left">Топы</a>
+        <div class="button">Вступить</div>
+      </div>
+    </div>
   </header>
 
   <main>
@@ -37,31 +52,36 @@
       <div class="content">
         <h1 class="topic">Какой нации принадлежит?</h1>
 
+        <div class="info">
+          <a href="../" class="button back">К&nbsp;задачам</a>
+          <p class="difficulty">Средняя</p>
+          <p class="number">№ 2</p>
+        </div>
+
         <img src="../../../../static/imgs/tanks/M4A2 (СССР).png">
 
         <form>
           <h2>Танк какой нации изображен на картинке?</h2>
-          
-          <div class="answer">
-            <input type="radio" name="answer" id="1" checked>
-            <label for="1">США</label>
+
+          <div class="answers">
+            <div class="answer">
+              <input type="radio" name="answer" id="1" checked>
+              <label for="1">США</label>
+            </div>
+            <div class="answer">
+              <input type="radio" name="answer" id="2">
+              <label for="2">Британия</label>
+            </div>
+            <div class="answer">
+              <input type="radio" name="answer" id="3">
+              <label for="3">Швеция</label>
+            </div>
+            <div class="answer valid">
+              <input type="radio" name="answer" id="4">
+              <label for="4">СССР</label>
+            </div>
           </div>
-          
-          <div class="answer">
-            <input type="radio" name="answer" id="2">
-            <label for="2">Британия</label>
-          </div>
-          
-          <div class="answer">
-            <input type="radio" name="answer" id="3">
-            <label for="3">Швеция</label>
-          </div>
-          
-          <div class="answer valid">
-            <input type="radio" name="answer" id="4">
-            <label for="4">СССР</label>
-          </div>
-          
+
           <div onclick="checkAnswer()" class="button">Ответить</div>
 
           <p class="solution">На картинке изображен «М-Четвёртый» («Эмча», Medium Tank M4A2 (76) W Sherman) - советская модификация M4 Sherman времен Второй Мировой.</p>

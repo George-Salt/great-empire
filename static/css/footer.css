@@ -1,14 +1,7 @@
 
-:root {
-  --bgc: #101010;
-  --bdc: #2f2f2f;
-  --ac: #bdff00;
-}
-
-
 footer {
   background-color: black;
-  color: white;
+  color: var(--background-color-light);
   padding: 50px;
   display: flex;
   justify-content: center;
@@ -25,18 +18,18 @@ footer h1 {
 }
 
 footer > .column h2 {
-  border-bottom: 3px solid var(--ac);
+  border-bottom: 3px solid var(--accent-color);
 }
 
 footer > .column a {
-  color: white;
+  color: var(--background-color-light);
   margin-top: 5px;
   font-weight: 600;
   transition: all 0.3s;
 }
 
 footer > .column a:hover {
-  color: #cccccc;
+  color: var(--border-color-light);
 }
 
 @media screen and (min-width: 900px) {

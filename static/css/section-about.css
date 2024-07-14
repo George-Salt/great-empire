@@ -1,91 +1,54 @@
 
-main > .about {
-  padding: 75px 0 75px;
+main > .img-text-chess-order-1-1 .item {
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-main > .about h1 {
-  font-size: 50px;
-  border-bottom: 5px solid var(--ac);
-}
-
-main > .about .specification {
-  width: 100%;
-  display: flex;
   justify-content: space-between;
+  gap: 50px;
 }
 
-main > .about .specification + .specification {
-  margin-top: 50px;
-}
-
-main > .about .specification .img {
-  background-size: cover;
-  background-position: center center;
-  width: 48%;
-  height: 200px;
+main > .img-text-chess-order-1-1 .item img {
+  width: calc(50% - 25px);
   border-radius: 50px;
-}
-
-main > .about .specification .img.b1 {
-  background-image: url("../imgs/banner1.png");
-}
-
-main > .about .specification .img.b2 {
-  background-image: url("../imgs/banner2.png");
-}
-
-main > .about .specification .img.b3 {
-  background-image: url("../imgs/banner3.png");
-}
-
-main > .about .specification .img.b4 {
-  background-image: url("../imgs/banner4.png");
-}
-
-main > .about .specification .img.b5 {
-  background-image: url("../imgs/banner5.png");
-}
-
-main > .about .specification .texts {
-  width: 48%;
-}
-
-main > .about .specification .texts.right-text {
-  text-align: right;
-}
-
-main > .about .specification h2 {
-  font-size: 30px;
-}
-
-main > .about .specification p {
-  margin-top: 5px;
-  font-weight: 600;
 }
 
 /* Светлая тема */
 
-main > .about.light {
-  background-color: white;
-  color: var(--bgc);
-}
-
-main > .about.light .specification p {
-  color: grey;
-  margin-top: 5px;
-  font-weight: 600;
+main > .img-text-chess-order-1-1.light .item p {
+  color: var(--border-color-dark);
 }
 
 /* Темная тема */
 
-main > .about.dark {
-  background-color: var(--bgc);
-  color: white;
+main > .img-text-chess-order-1-1.dark .item p {
+  color: var(--border-color-light);
 }
 
-main > .about.dark .specification p {
-  color: #cccccc;
+@media screen and (min-width: 900px) {
+  main > .img-text-chess-order-1-1 .item.text-left .text {
+    text-align: left;
+  }
+
+  main > .img-text-chess-order-1-1 .item.text-right .text {
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  main > .img-text-chess-order-1-1 .item {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  main > .img-text-chess-order-1-1 .item img {
+    width: 100%;
+    max-width: 95vw;
+  }
+
+  main > .img-text-chess-order-1-1 .item.text-right {
+    flex-direction: column-reverse;
+  }
+
+  main > .img-text-chess-order-1-1 .item .text {
+    text-align: center;
+  }
 }
